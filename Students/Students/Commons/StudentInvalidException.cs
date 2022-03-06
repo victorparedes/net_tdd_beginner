@@ -1,6 +1,6 @@
 ﻿namespace Students.Commons
 {
-    public class StudentInvalidException:Exception
+    public class StudentInvalidException : Exception
     {
     }
 }

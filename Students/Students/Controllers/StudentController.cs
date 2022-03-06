@@ -18,16 +18,24 @@ namespace Students.Controllers
         }
         // GET: api/<ValuesController>
         [HttpGet]
-        public IEnumerable<Student> Get()
+        public IActionResult Get()
         {
-            return new List<Student>();
+            return Ok(_studentService.GetAll());
         }
 
         // GET api/<ValuesController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{document}")]
+        public IActionResult Get(string document)
         {
-            return "value";
+            try
+            {
+                var result = _studentService.Get(document);
+                return Ok(result);
+            }
+            catch (StudentNotFoundException)
+            {
+                return NotFound();
+            }
         }
 
         // POST api/<ValuesController>
@@ -49,18 +57,6 @@ namespace Students.Controllers
             {
                 return BadRequest();
             }
-        }
-
-        // PUT api/<ValuesController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<ValuesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }
