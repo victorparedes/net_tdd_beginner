@@ -1,5 +1,9 @@
 # net_tdd_beginner
-Este repo es una implementacion de una aplicacion ejemplo para una capacitacion sobre TDD que debo preparar. Esta desarrollada para poder pararse en cualquier commit y eliminar el codigo implementado para ir cumpliendo con las expectativas de los test.
+Este repo es una implementacion de TDD sobre un proyecto simple, esta orientado a los DEVs que estan iniciando en esta practica y necesitan algo con que jugar.
+
+Si este proyecto te sirve para completar alguna capacitacion que estes dando, sentite libre de clonarlo y utilizarlo. Tambien podes enviarme sugerencias de mejoras siempre y cuando sea para principiantes.
+
+Mas informacion en el [blog de andreani](https://medium.com/code4ndreani) 
 <br/>
 
 ## Casos de uso.
